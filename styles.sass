@@ -1,0 +1,150 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+#container
+  display: flex
+  flex-flow: column
+  height: 100vh
+  color: #495464
+
+  .grid-container
+    display: grid
+    grid-template-columns: 0.3fr 1.2fr
+    grid-template-rows: 50px 35px 3fr
+    gap: 0px 0px
+    grid-template-areas: "header header" "links links" "side area"
+
+    .header
+      grid-area: header
+      background-color: #e8e8e8
+      padding: 12px
+      color: #2d6187
+      display: flex
+      a
+        text-decoration: none
+        color: #2d6187
+      .header--title
+        color: #495464
+        margin-left: 30px
+        font-style: italic
+
+    .links
+      grid-area: links
+      background-color: #30475e
+      padding: 5px
+      font-weight: bold
+      color: #fff
+
+      nav > ul
+        display: flex
+        li
+          margin-left: 10px
+          list-style: none
+          padding: 0.5ex 1ex
+          a
+            text-decoration: none
+            font-weight: bold
+            color: #eee
+            display: list-item
+        li:hover
+          background-color: #2a5a7c
+
+    .side
+      grid-area: side
+      border-right: 1px solid #ccc
+      min-height: 100vh
+      .blog
+        padding: 20px 10px
+        font-weight: normal
+      ul
+        li
+          list-style: none
+          a
+            text-decoration: none
+            // font-weight: bold
+            color: #2a5a7c
+            display: list-item
+            margin-left: 15px
+            padding: 5px
+            font-size: 20px
+        li:hover
+          background-color: #ddd
+
+    .area
+      grid-area: area
+      padding: 10px
+      article
+        h1,h2,h3,p
+          margin: 10px 0px
+        a
+          text-decoration: none
+          color: #2a5a7c
+          font-weight: bold
+
+      .hello
+        text-align: center
+        h2
+          margin: 20px
+        small
+          display: block
+          font-size: 16px
+          margin: 10px
+          color: rgb(110, 110, 110)
+
+      article
+        .staff
+          margin: 20px
+
+          table, th, td
+            border: 1px solid #9e9e9e
+            border: 0
+
+          table
+            width: 100%
+
+            thead
+              border-bottom: 2px solid #727e8c
+
+            th
+              padding: 10px 5px
+
+            td
+              padding: 10px 5px
+              border-bottom: 1px solid #727e8c
+
+            tr:hover
+              background: #ccc
+
+.square-brackets-quote
+  display: inline-block
+  font-family: sans-serif
+  margin: 5px
+  width: 90%
+  blockquote
+    border: solid 0.5em #ccc
+    display: inline-block
+    margin-top: 10px
+    padding: 10px
+    position: relative
+    &:before
+      background-color: #fff
+      bottom: -1em
+      content: ""
+      left: 2em
+      position: absolute
+      right: 2em
+      top: -1em
+
+    cite
+      color: #757575
+      display: block
+      font-size: small
+      font-style: normal
+      text-align: right
+      text-transform: uppercase
+
+    > *
+      position: relative
+      z-index: 1
