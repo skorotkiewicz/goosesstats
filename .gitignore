@@ -2,4 +2,4 @@
 .vscode/
 dist/styles*
 html/
-
+*.html
